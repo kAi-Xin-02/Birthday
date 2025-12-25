@@ -346,15 +346,38 @@
     }
 
     function initHeartSystem() {
-        if (!APP.elements.heartsFloatContainer) return;
-        
-        APP.systems.heartSystem = new HeartSystem(APP.elements.heartsFloatContainer, {
+    if (!APP.elements.heartsFloatContainer) return;
+
+    APP.systems.heartSystem = new HeartSystem(
+        APP.elements.heartsFloatContainer,
+        {
             maxHearts: APP.device.isMobile ? 15 : 30,
             spawnRate: APP.device.isMobile ? 800 : 500
-        });
-        
-        APP.systems.heartSystem.start();
+        }
+    );
+
+    APP.systems.heartSystem.start();
+
+    if (APP.device.isMobile) {
+        APP.intervals.mobileHearts = setInterval(function () {
+            if (!APP.systems.heartSystem) return;
+
+            const rect = document
+                .querySelector('.tree-container')
+                .getBoundingClientRect();
+
+            APP.systems.heartSystem.createHeartBurst(
+                rect.left + rect.width / 2,
+                rect.top + rect.height / 3,
+                random(6, 10)
+            );
+        }, 900);
     }
+}
+
+    
+
+
 
     function initTypewriter() {
         if (!APP.elements.typedMessage) return;
@@ -593,4 +616,5 @@
 
 
 })(window, document);
+
 
