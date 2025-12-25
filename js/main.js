@@ -469,12 +469,27 @@
     }
 
     function handleDocumentClick(event) {
-        if (!APP.isMainPageVisible) return;
-        
-        if (APP.systems.heartSystem && random(0, 10) > 5) {
-            APP.systems.heartSystem.createHeartBurst(event.clientX, event.clientY, random(5, 10));
-        }
+    if (!APP.isMainPageVisible || !APP.systems.heartSystem) return;
+
+    var x, y;
+
+    if (event.touches && event.touches.length > 0) {
+        // Mobile touch hai 
+        x = event.touches[0].clientX;
+        y = event.touches[0].clientY;
+    } else {
+        // pc ke liye
+        x = event.clientX;
+        y = event.clientY;
     }
+
+    APP.systems.heartSystem.createHeartBurst(
+        x,
+        y,
+        random(5, 10)
+    );
+}
+
 
     function handleResize() {
         if (APP.systems.tree && APP.elements.treeCanvas) {
@@ -551,15 +566,24 @@
         document.head.appendChild(style);
     }
 
-    if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', function() {
-            addGlobalStyles();
-            init();
-        });
-    } else {
+   if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', function () {
+
+        document.addEventListener('click', handleDocumentClick);
+
+        document.addEventListener('touchstart', handleDocumentClick, { passive: true });
+
         addGlobalStyles();
         init();
-    }
+    });
+} else {
+    document.addEventListener('click', handleDocumentClick);
+    document.addEventListener('touchstart', handleDocumentClick, { passive: true });
+
+    addGlobalStyles();
+    init();
+}
+
 
     window.BirthdayApp = {
         init: init,
@@ -569,3 +593,4 @@
 
 
 })(window, document);
+
