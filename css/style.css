@@ -1412,7 +1412,7 @@ body {
     }
     
     .tree-container {
-        height: 400px;
+    height: 75vh;
     }
 }
 
@@ -1440,8 +1440,8 @@ body {
     }
     
     .tree-container {
-        height: 350px;
-    }
+    height: 70vh;
+    max-width: 100%;
 }
 
 @media screen and (max-height: 600px) {
@@ -1458,4 +1458,5 @@ body {
     body {
         min-height: -webkit-fill-available;
     }
+
 }
