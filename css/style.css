@@ -856,6 +856,8 @@ body {
     height: 100%;
     pointer-events: none;
     overflow: hidden;
+    will-change: transform;
+    transform: translateZ(0);
 }
 
 #message-section {
@@ -1460,3 +1462,4 @@ body {
     }
 
 }
+
