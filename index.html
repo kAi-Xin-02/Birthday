@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="theme-color" content="#ff6b95">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<title>Happy 18th Birthday Vishu!</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700;800;900&family=Great+Vibes&family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body>
+<div id="preloader">
+<div class="loader-container">
+<div class="loader-heart">
+<div class="heart-shape"></div>
+<div class="heart-shape"></div>
+</div>
+<div class="loader-text">Preparing something special...</div>
+<div class="loader-progress">
+<div class="loader-bar"></div>
+</div>
+</div>
+</div>
+
+<div id="landing-page">
+<div class="landing-background">
+<div class="gradient-overlay"></div>
+<div class="floating-shapes">
+<div class="shape shape-1"></div>
+<div class="shape shape-2"></div>
+<div class="shape shape-3"></div>
+<div class="shape shape-4"></div>
+<div class="shape shape-5"></div>
+<div class="shape shape-6"></div>
+<div class="shape shape-7"></div>
+<div class="shape shape-8"></div>
+</div>
+</div>
+<div class="landing-content">
+<div class="envelope-container">
+<div class="envelope">
+<div class="envelope-flap"></div>
+<div class="envelope-body">
+<div class="letter">
+<div class="letter-content">
+<span class="letter-icon">💌</span>
+<span class="letter-text">You have a special message!</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<h1 class="landing-title">
+<span class="title-line line-1">A Special Day</span>
+<span class="title-line line-2">Awaits You</span>
+</h1>
+<p class="landing-subtitle">Click to unwrap your surprise</p>
+<button id="enter-btn" class="enter-button">
+<span class="btn-text">Open Gift</span>
+<span class="btn-icon">🎁</span>
+<div class="btn-glow"></div>
+</button>
+</div>
+<div class="landing-footer">
+<div class="scroll-indicator">
+<div class="mouse">
+<div class="wheel"></div>
+</div>
+<span>Click above to continue</span>
+</div>
+</div>
+</div>
+
+<div id="main-page">
+<div id="background-layer">
+<div class="bg-gradient"></div>
+<div class="bg-particles" id="bg-particles"></div>
+<div class="bg-stars" id="bg-stars"></div>
+</div>
+
+<div id="fireworks-container"></div>
+
+<header id="header">
+<div class="header-content">
+<div class="header-decoration left">
+<span>✨</span>
+<span>🎈</span>
+<span>🎉</span>
+</div>
+<div class="header-title">
+<h1 class="main-heading">
+<span class="word word-1">Happy</span>
+<span class="word word-2">18th</span>
+<span class="word word-3">Birthday</span>
+</h1>
+<h2 class="name-heading">
+<span class="name-letter">V</span>
+<span class="name-letter">i</span>
+<span class="name-letter">s</span>
+<span class="name-letter">h</span>
+<span class="name-letter">u</span>
+<span class="name-letter">!</span>
+</h2>
+</div>
+<div class="header-decoration right">
+<span>🎉</span>
+<span>🎈</span>
+<span>✨</span>
+</div>
+</div>
+<div class="header-badge">
+<div class="badge-inner">
+<span class="badge-age">18</span>
+<span class="badge-text">Years of Amazing!</span>
+</div>
+</div>
+</header>
+
+<section id="tree-section">
+<div class="tree-container">
+<canvas id="tree-canvas"></canvas>
+<div id="hearts-float-container"></div>
+</div>
+</section>
+
+<section id="message-section">
+<div class="message-container">
+<div class="message-header">
+<div class="message-icon">💝</div>
+<h3 class="message-title">A Message For You</h3>
+</div>
+<div class="message-body">
+<div id="typed-message" class="typed-text"></div>
+<span class="typing-cursor">|</span>
+</div>
+<div class="message-footer">
+<div class="signature">
+<span class="signature-heart">❤️</span>
+<span class="signature-text">With Love</span>
+</div>
+</div>
+</div>
+</section>
+
+<section id="counter-section">
+<div class="counter-container">
+<div class="counter-header">
+<h3 class="counter-title">
+<span class="counter-icon">⏰</span>
+<span id="counter-message">You've Been Making The World Brighter For</span>
+</h3>
+</div>
+<div class="counter-grid">
+<div class="counter-box" data-aos="zoom-in" data-aos-delay="100">
+<div class="counter-value">
+<span id="counter-days" class="digit">0</span>
+</div>
+<div class="counter-label">Days</div>
+<div class="counter-decoration"></div>
+</div>
+<div class="counter-box" data-aos="zoom-in" data-aos-delay="200">
+<div class="counter-value">
+<span id="counter-hours" class="digit">00</span>
+</div>
+<div class="counter-label">Hours</div>
+<div class="counter-decoration"></div>
+</div>
+<div class="counter-box" data-aos="zoom-in" data-aos-delay="300">
+<div class="counter-value">
+<span id="counter-minutes" class="digit">00</span>
+</div>
+<div class="counter-label">Minutes</div>
+<div class="counter-decoration"></div>
+</div>
+<div class="counter-box" data-aos="zoom-in" data-aos-delay="400">
+<div class="counter-value">
+<span id="counter-seconds" class="digit">00</span>
+</div>
+<div class="counter-label">Seconds</div>
+<div class="counter-decoration"></div>
+</div>
+</div>
+<div class="counter-footer">
+<p class="counter-note">Every second with you is a blessing! 🌟</p>
+</div>
+</div>
+</section>
+
+<section id="wishes-section">
+<div class="wishes-container">
+<div class="wish-card wish-card-1">
+<div class="wish-icon">🌟</div>
+<p class="wish-text">May all your dreams come true!</p>
+</div>
+<div class="wish-card wish-card-2">
+<div class="wish-icon">🎯</div>
+<p class="wish-text">Success in everything you do!</p>
+</div>
+<div class="wish-card wish-card-3">
+<div class="wish-icon">💪</div>
+<p class="wish-text">Strength for every challenge!</p>
+</div>
+<div class="wish-card wish-card-4">
+<div class="wish-icon">😊</div>
+<p class="wish-text">Endless happiness always!</p>
+</div>
+</div>
+</section>
+
+<section id="gallery-section">
+<div class="gallery-container">
+<div class="gallery-title">
+<h3>Celebrating You!</h3>
+</div>
+<div class="celebration-icons">
+<div class="celeb-icon">🎂</div>
+<div class="celeb-icon">🎁</div>
+<div class="celeb-icon">🎈</div>
+<div class="celeb-icon">🎉</div>
+<div class="celeb-icon">🥳</div>
+<div class="celeb-icon">🍰</div>
+<div class="celeb-icon">🎊</div>
+<div class="celeb-icon">💫</div>
+</div>
+</div>
+</section>
+
+<footer id="footer">
+<div class="footer-content">
+<div class="footer-message">
+<p class="footer-text">Made with</p>
+<span class="footer-heart">❤️</span>
+<p class="footer-text">for Vishu</p>
+</div>
+<div class="footer-decoration">
+<span>🎂</span>
+<span>Happy 18th Birthday!</span>
+<span>🎂</span>
+</div>
+</div>
+</footer>
+
+<div id="floating-elements">
+<div id="balloons-container"></div>
+<div id="confetti-container"></div>
+<div id="sparkles-container"></div>
+</div>
+
+<div id="music-control">
+<button id="music-btn" class="music-button">
+<span class="music-icon">🎵</span>
+</button>
+</div>
+
+<div id="click-effect"></div>
+</div>
+
+<script src="js/core.js"></script>
+<script src="js/tree.js"></script>
+<script src="js/hearts.js"></script>
+<script src="js/effects.js"></script>
+<script src="js/typewriter.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
