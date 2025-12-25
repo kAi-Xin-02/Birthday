@@ -231,7 +231,10 @@
         ctx.scale(APP.device.pixelRatio || 1, APP.device.pixelRatio || 1);
         
         var centerX = width / 2;
-        var baseY = height - 30;
+        var baseY = APP.device.isMobile
+    ? height - 60
+    : height - 30;
+
         
         APP.systems.tree = new Tree(canvas, {
             seed: {
@@ -260,7 +263,10 @@
     }
 
     function generateBranches(centerX, baseY, width, height) {
-        var scale = Math.min(width / 400, height / 500);
+        var scale = APP.device.isMobile
+    ? Math.min(width / 320, height / 420)
+    : Math.min(width / 400, height / 500);
+
         
         return [
             {
@@ -560,5 +566,6 @@
         CONFIG: CONFIG,
         APP: APP
     };
+
 
 })(window, document);
